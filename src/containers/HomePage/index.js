@@ -5,23 +5,23 @@ import Movie from "./Movie";
 
 class HomePage extends Component {
     componentDidMount() {
-        this.props.fetchMovies();
+        // this.props.fetchMovies();
     }
 
     render() {
         return (
         <div className="container">
             <div className="row">
-                {this.props.movies.map(movie => <Movie movie={movie} key={movie.id} /> )}
+                {[1,3,4,5].map(movie => <Movie movie={movie}  /> )}
             </div>
         </div>
         );
     }
 }
 
-HomePage.prototype = {
-    movies: PropTypes.array.isRequired,
-    fetchMovies: PropTypes.func.isRequired
+HomePage.propTypes = {
+    movies: PropTypes.array,
+    fetchMovies: PropTypes.func
 }
 
 export default HomePage;
