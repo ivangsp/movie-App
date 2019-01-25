@@ -4,7 +4,7 @@ import SearchForm from './SearchForm';
 
 const NavBar = props => {
     return(
-        <nav class="navbar navbar-light bg-light justify-content-between">
+        <nav className="navbar navbar-light bg-light justify-content-between navbar-fixed-top">
             <a className="navbar-brand" href="">Movies</a>
             <SearchForm />
         </nav>
