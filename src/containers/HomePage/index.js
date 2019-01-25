@@ -10,10 +10,10 @@ class HomePage extends Component {
 
     render() {
         return (
-        <div className="container">
-            <div className="row">
-                {[1,3,4,5].map(movie => <Movie movie={movie}  /> )}
-            </div>
+            <div className="container">
+                <div className="row">
+                    {[1,2,3,3,3,3,3,3,3,4,5].map(movie => <Movie movie={movie}  /> )}     
+                </div>
         </div>
         );
     }
