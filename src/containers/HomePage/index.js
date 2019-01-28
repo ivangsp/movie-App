@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FETCH_MOVIES_REQUESTED} from '../../actions'
 
 import Movie from "./Movie";
 
 class HomePage extends Component {
     componentDidMount() {
-        // this.props.fetchMovies();
+        this.props.fetchMovies();
+        console.log('movies', this.props.movies);
     }
 
     render() {
         return (
             <div className="container">
                 <div className="row">
-                    {[1,2,3,3,3,3,3,3,3,4,5].map(movie => <Movie movie={movie}  /> )}     
+                    {this.props.movies.map(movie => <Movie movie={movie}  key={movie.key} /> )}     
                 </div>
         </div>
         );
@@ -24,4 +27,16 @@ HomePage.propTypes = {
     fetchMovies: PropTypes.func
 }
 
-export default HomePage;
+const mapStateToProps = state => ({
+   movies: state.movieReducer.movies
+  });
+  
+  const mapDispatchToProps = (dispatch, ownProps) => ({
+    fetchMovies: () => dispatch({type: FETCH_MOVIES_REQUESTED})
+  });
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(HomePage);
+
