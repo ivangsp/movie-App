@@ -8,7 +8,6 @@ import Movie from "./Movie";
 class HomePage extends Component {
     componentDidMount() {
         this.props.fetchMovies();
-        console.log('movies', this.props.movies);
     }
 
     render() {
