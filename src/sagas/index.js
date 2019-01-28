@@ -1,6 +1,6 @@
 import { fetchAllMovies } from './api';
 import { call, put } from 'redux-saga/effects';
-import { FETCH_MOVIES_REQUESTED, MOVIES_FETCHED, ERROR_OCCURED } from '../actions';
+import { FETCH_MOVIES_REQUESTED, MOVIES_FETCHED, ERROR_OCCURED } from '../actions/constants';
 
 import { takeEvery } from 'redux-saga/effects';
 

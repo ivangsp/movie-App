@@ -1,3 +1,13 @@
-export const FETCH_MOVIES_REQUESTED = 'FETCH_MOVIES_REQUESTED';
-export const MOVIES_FETCHED = 'MOVIES_FETCHED';
-export const ERROR_OCCURED = 'ERROR_OCCURED';
+import {NUM_MOVIES_PER_PAGE, SET_MOVIES_PER_PAGE} from './constants';
+
+export const setCurrentPage = page => {
+    const startingIndex = (page - 1) * NUM_MOVIES_PER_PAGE;
+    const endingIndex = NUM_MOVIES_PER_PAGE * page;
+    return { 
+        type: SET_MOVIES_PER_PAGE, 
+        payload: {startingIndex: startingIndex, endingIndex: endingIndex}
+    }
+}
+
+
+

@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { FETCH_MOVIES_REQUESTED} from '../../actions'
+import { setCurrentPage} from '../../actions';
+import { FETCH_MOVIES_REQUESTED} from '../../actions/constants';
+import Pagination from '../../components/Pagination';
 
-import Movie from "./Movie";
+import MovieList from './MovieList';
 
 class HomePage extends Component {
+    constructor(props){
+        super(props);
+        this.moviePerPage= 12;
+    }
     componentDidMount() {
         this.props.fetchMovies();
     }
@@ -13,8 +19,14 @@ class HomePage extends Component {
     render() {
         return (
             <div className="container">
+                <MovieList movies ={this.props.moviesPerPage} />
                 <div className="row">
-                    {this.props.movies.map(movie => <Movie movie={movie}  key={movie.key} /> )}     
+                    <div className="col-xsm-12">
+                        <Pagination 
+                            totalNumItems={this.props.movies.length} 
+                            itemPerPage={this.moviePerPage} 
+                            changePageNum ={this.props.changePageNum} />
+                    </div>
                 </div>
         </div>
         );
@@ -23,15 +35,19 @@ class HomePage extends Component {
 
 HomePage.propTypes = {
     movies: PropTypes.array,
-    fetchMovies: PropTypes.func
+    moviesPerPage: PropTypes.array,
+    fetchMovies: PropTypes.func,
+    setCurrentPage: PropTypes.func,
 }
 
 const mapStateToProps = state => ({
-   movies: state.movieReducer.movies
+   movies: state.movieReducer.movies,
+   moviesPerPage: state.movieReducer.moviesPerPage
   });
   
   const mapDispatchToProps = (dispatch, ownProps) => ({
-    fetchMovies: () => dispatch({type: FETCH_MOVIES_REQUESTED})
+    fetchMovies: () => dispatch({type: FETCH_MOVIES_REQUESTED}),
+    changePageNum: (page) => dispatch(setCurrentPage(page))
   });
   
   export default connect(
