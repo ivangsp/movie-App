@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import SearchForm from './SearchForm';
+import SearchForm from '../SearchForm';
 
 const NavBar = props => {
     return(
@@ -10,4 +10,5 @@ const NavBar = props => {
         </nav>
     )
 }
+
 export default NavBar;

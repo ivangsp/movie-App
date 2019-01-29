@@ -22,7 +22,7 @@ const movieReducer = (state = intitialState, action) => {
       return {...state, moviesPerPage: state.movies.slice(action.payload.startingIndex, action.payload.endingIndex)}
     
     case SET_FILTERED_MOVIES:
-      const filteredMovies =searchMovieByName(action.payload);
+      const filteredMovies =searchMovieByName(state.movies, action.payload);
       return {...state, 
         filteredMovies: filteredMovies,
         moviesPerPage: filteredMovies.slice(0, NUM_MOVIES_PER_PAGE)
