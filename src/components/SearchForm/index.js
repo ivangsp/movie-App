@@ -23,7 +23,7 @@ class SearchForm extends React.Component {
         }
         this.timeOutHandle = setTimeout(
             () =>{ this.props.searchMovieByTitle(title);}, 
-        700);
+        600);
 
     }
     render(){

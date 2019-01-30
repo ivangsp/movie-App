@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import NavBar from './components/NavBar';
+import MoviePage from './containers/MoviePage';
 
 
 import HomePage from './containers/HomePage';
@@ -13,7 +14,7 @@ const App = ({ history }) => {
       <div>
         <NavBar />
         <Route path="/" exact component={HomePage} />
-        {/* <Route path="/products/:id" exact component={ProductPage} /> */}
+        <Route path="/movies" exact component={MoviePage} />
       </div>
     </ConnectedRouter>
   );

@@ -1,0 +1,78 @@
+.movie-thumbnail {
+    margin-top: 15px !important;
+    height: 500px;
+    width: 90%;
+    margin: auto;
+    background-color: #cccccc;
+    background-image: url('./icons/ant-man.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.play-icon {
+    display: flex;
+    justify-content: center;
+
+}
+
+.play-icon img {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+}
+
+.movie-details {
+    margin-top: 20px !important;
+    display: flex;
+    justify-content: start; 
+    flex-direction: row;
+    width: 90%;
+    margin: auto;   
+}
+
+.small-movie-img {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1
+    /* align-items: center;   */
+}
+
+.details-container {
+    display: flex;
+    justify-content: start; 
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.title-desc {
+    display: flex;
+    justify-content: start; 
+    flex-direction: column;
+}
+.title {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 10px 10px 15px;
+}
+.description {
+    color: #aaa;
+    font-size: 12px;
+    font-style: italic;
+    padding: 0 15px
+}
+
+.other-details {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    color: #73B353;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.other-details b {
+    color: #333;
+}
