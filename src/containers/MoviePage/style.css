@@ -4,7 +4,6 @@
     width: 90%;
     margin: auto;
     background-color: #cccccc;
-    background-image: url('./icons/ant-man.jpg');
     background-repeat: no-repeat, repeat;
     background-size: 100% 100%;
     display: flex;
@@ -71,6 +70,9 @@
     color: #73B353;
     font-size: 13px;
     padding: 10px;
+}
+.other-details {
+    margin: 4px;
 }
 
 .other-details b {

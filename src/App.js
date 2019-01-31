@@ -14,7 +14,8 @@ const App = ({ history }) => {
       <div>
         <NavBar />
         <Route path="/" exact component={HomePage} />
-        <Route path="/movies" exact component={MoviePage} />
+        <Route path="/movies" exact component={HomePage} />
+        <Route path="/movies/:key" exact component={MoviePage} />
       </div>
     </ConnectedRouter>
   );
