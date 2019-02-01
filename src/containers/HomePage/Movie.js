@@ -7,14 +7,12 @@ const IMAGE_URL = '/images/movie-covers/';
 
 const Movie = ({movie}) =>{
     return (
-        <div className="col-xsm-12">
-            <Link to={"/movies/" + movie.key } >
-                <div className="card" style={{width: "17rem", height: "17rem"}}>
-                    <img src={IMAGE_URL + movie.img} className="card-img-top" style={{width: "17rem", height: "17rem"}} alt="" />
-                    <div className="card-body">
-                        <p className="card-text">{movie.name}</p>
-                    </div>
-                </div>
+        <div className="thumbnail-container">
+            <Link to={"/movies/" + movie.key } className="thumbnail" >
+                <img src={IMAGE_URL + movie.img} className=""  alt="" />
+                <span className="movie-info">
+                    <h2>{movie.name}</h2>
+                </span>
             </Link>
         </div>
     )

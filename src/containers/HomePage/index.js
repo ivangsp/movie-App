@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import "./style.css";
 import { setCurrentPage} from '../../actions';
 import { FETCH_MOVIES_REQUESTED} from '../../actions/constants';
 import Pagination from '../../components/Pagination';

@@ -1,0 +1,60 @@
+/* .movie-container {
+  clear: both;
+  display: block;
+  margin: 0 -1%;
+  overflow: hidden;
+  padding: 0;
+} */
+.thumbnail-container {
+    float: left;
+    height: 260px;
+    margin: 1%;
+    padding: 0;
+    position: relative;
+    width: 12.5%;
+}
+.thumbnail {
+  border-radius: 5px;
+  display: block;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  width: 100%;
+}
+
+.thumbnail img {
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  width:1500px;
+  
+}
+.movie-info {
+    background-attachment: scroll;
+    background-color: #cccccc85;
+    background-position: center top;
+    bottom: 0;
+    box-sizing: border-box;
+    height: auto;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+
+.movie-info h2 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
