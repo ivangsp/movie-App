@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/express": "^4.16.1",
     "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
     "connected-react-router": "^6.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "history": "^4.7.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -15,13 +19,17 @@
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
     "redux-saga": "^1.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "ts-node-dev --respawn --transpileOnly ./server/app/app.ts",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": "react-app"

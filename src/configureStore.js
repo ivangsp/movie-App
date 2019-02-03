@@ -17,7 +17,6 @@ const sagaMiddleware = createSagaMiddleware();
   process.env.NODE_ENV === 'development'
     ? [sagaMiddleware, createLogger()]
     : [sagaMiddleware];
-// const middleWares = [createLogger()];
 
 export default function configureStore(preloadedState) {
   const store = createStore(
@@ -27,7 +26,6 @@ export default function configureStore(preloadedState) {
       applyMiddleware(
         ...middleWares,
         routerMiddleware(history), // for dispatching history actions
-        // ... other middlewares ...
       ),
     ),
   )
