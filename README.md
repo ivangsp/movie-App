@@ -16,6 +16,8 @@ Displays a collection of movies.
 
 - Run `npm run start`. This starts an express server which runs on port `5000` (make sure no other application is running on that port) and client application which runs on port `3000`.
 
+- Run `npm test` to run the unit tests.
+
 ## Note
 
 This project is for study purposes and is intended to exhibit my skill set in Reactjs.
