@@ -16,8 +16,7 @@ const MovieList = ({movies}) => {
 }
 
 MovieList.propTypes = {
-    movies: PropTypes.array,
-    currentPage: PropTypes.number
+    movies: PropTypes.array
 }
 
 export default MovieList;

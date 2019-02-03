@@ -1,3 +1,5 @@
+$gray-color: #cccccc85;
+$yellow-color: yellow;
 
 .movies-container {
   display: grid;
@@ -21,13 +23,12 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #cccccc85;
+  background-color:$gray-color;
   z-index: 5;
 
 }
 .movie-title h2 {
-  color: yellow;
-  /* color: #fff; */
+  color: $yellow-color;
   font-size: 14px;
   font-weight: 400;
   margin: 0;
