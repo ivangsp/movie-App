@@ -37,7 +37,9 @@ class SearchForm extends React.Component {
                     type="search" 
                     placeholder="Search movie by title" 
                     aria-label="Search" />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button 
+                    className="btn btn-outline-success my-2 my-sm-0" 
+                    onClick={this.props.searchMovieByTitle(this.state.title)}>Search</button>
             </form>
         )
     }

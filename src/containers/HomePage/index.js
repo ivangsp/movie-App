@@ -25,7 +25,7 @@ class HomePage extends Component {
                     <div className="col-xsm-12">
                         <Pagination 
                             totalNumItems={this.props.movies.length} 
-                            itemPerPage={this.moviePerPage} 
+                            itemPerPage={this.props.moviesPerPage.length} 
                             changePageNum ={this.props.changePageNum} />
                     </div>
                 </div>

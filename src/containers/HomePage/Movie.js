@@ -7,14 +7,12 @@ const IMAGE_URL = '/images/movie-covers/';
 
 const Movie = ({movie}) =>{
     return (
-        <div className="thumbnail-container">
             <Link to={"/movies/" + movie.key } className="thumbnail" >
-                <img src={IMAGE_URL + movie.img} className=""  alt="" />
-                <span className="movie-info">
+                <img src={IMAGE_URL + movie.img} className="img-thumbnail"  alt="" />
+                <span className="movie-title">
                     <h2>{movie.name}</h2>
                 </span>
             </Link>
-        </div>
     )
 }
 

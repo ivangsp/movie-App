@@ -4,7 +4,8 @@
     width: 90%;
     margin: auto;
     background-color: #cccccc;
-    background-repeat: no-repeat, repeat;
+    background-repeat: repeat, repeat;
+    opacity: 0.8;
     background-size: 100% 100%;
     display: flex;
     justify-content: center;
@@ -18,8 +19,8 @@
 }
 
 .play-icon img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     align-self: center;
 }
 
@@ -35,8 +36,8 @@
 .small-movie-img {
     display: flex;
     justify-content: center;
-    flex-grow: 1
-    /* align-items: center;   */
+    flex-grow: 1;
+    width: 30%;
 }
 
 .details-container {

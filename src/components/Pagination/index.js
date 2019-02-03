@@ -44,6 +44,8 @@ class Pagination extends Component {
     }
     render () {
         const totalNumPages = this.getTotalNUmPages()
+        if (this.props.itemPerPage <12) return null;
+    
         return (
             <nav aria-label="">
                 <ul className="pagination justify-content-end">

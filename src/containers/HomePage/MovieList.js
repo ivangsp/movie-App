@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const MovieList = ({movies}) => {
     return (
-        <div className="row">
+        <div className="movies-container">
             {movies.map(movie => (
             <Movie 
                 movie={movie}  
