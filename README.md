@@ -14,7 +14,7 @@ Displays a collection of movies.
 
 - Run  `npm install` to install all the dependencies
 
-- Run `npm start`. This starts an express server which runs on port `5000` (make sure not other application is running on that port) and client application which runs on port `3000`.
+- Run `npm run start`. This starts an express server which runs on port `5000` (make sure no other application is running on that port) and client application which runs on port `3000`.
 
 ## Note
 
