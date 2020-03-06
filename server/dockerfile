@@ -1,0 +1,17 @@
+FROM node:12.2.0-alpine
+
+# create app directory
+RUN mkdir -p /svr/app/server
+
+WORKDIR /svr/app/server
+
+COPY server/package.json /svr/app/server
+COPY server/package-lock.json /svr/app/server
+
+# Install dependecies
+RUN npm install
+
+#copy all the other files in to the container
+COPY server/* /srv/app
+
+CMD [ "npm", "server" ]

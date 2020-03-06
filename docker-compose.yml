@@ -1,0 +1,31 @@
+version: '3'
+
+services: 
+    server:
+        build: ./server
+        environment: 
+            - SERVER_PORT=${SERVER_PORT}
+        expose: 
+            - ${SERVER_PORT}
+        ports:
+            - ${SERVER_PORT}:${SERVER_PORT}
+        volumes: 
+            - ./server/app:/svr/app/server/app
+        command: npm run server
+################################## client container ################
+    client:
+        build: .
+        environment: 
+            - CLIENT_PORT=${CLIENT_PORT}
+        expose: 
+            - ${CLIENT_PORT}
+        ports: 
+            - ${CLIENT_PORT}:${CLIENT_PORT}
+        volumes: 
+            - ./src:/svr/app/client/src
+            - ./public:/svr/app/client/public
+        links: 
+            - server
+        command: npm run client
+
+        

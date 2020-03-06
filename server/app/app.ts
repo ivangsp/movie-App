@@ -6,7 +6,7 @@ const movies = require('./movie.mock-data');
 
 const app = express();
 const port =  5000;
-console.log("path", path.join(__dirname, 'public'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(cors());
