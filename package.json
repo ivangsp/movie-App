@@ -9,7 +9,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "history": "^4.7.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
